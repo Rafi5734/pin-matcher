@@ -126,5 +126,5 @@ input[type='text']:focus {
 #deed-remain {
     color: #FF3C5F;
     margin-top: 10px;
-    visibility: hidden;
+    visibility: visible;
 }

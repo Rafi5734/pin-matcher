@@ -7,7 +7,7 @@ const pinSubmitBtn = document.getElementById( "pin-submit-btn" );
 const wrongMessage = document.getElementById( "wrong" );
 const rightMessage = document.getElementById( "right" );
 const tryRemain = document.getElementById( "deed-remain" );
-
+const tryLeft = document.getElementById( "try-remain" );
 
 
 
@@ -64,10 +64,16 @@ pinSubmitBtn.addEventListener( "click", function ( e )
         wrongMessage.style.visibility = "none";
         tryRemain.style.display = "none";
         rightMessage.style.visibility = "visible";
+        pinMatcherDisplay.value = "";
+
     } else
     {
         rightMessage.style.display = "none";
         wrongMessage.style.visibility = "visible";
         tryRemain.style.visibility = "visible";
+        pinMatcherDisplay.value = "";
+        let totalTry = parseInt(tryLeft.innerText);
+        --totalTry;
+        console.log(totalTry);
     }
 } );
